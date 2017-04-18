@@ -1,6 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+  Alorithm to Create Huffman Tree:
+    1. Create a leaf node for each character and add them to the priority queue.
+
+    2. While there is more than one node in the queue:
+
+        a. Remove the two nodes of highest priority (lowest frequency) from the queue
+
+        b. Create a new internal node with these two nodes as children and with
+           frequency equal to the sum of the two nodes’ frequencies.
+
+        c. Add the new node to the priority queue.
+
+    3. The remaining node is the root node and the tree is complete.
+
+  Time Complexity: O(nlog(n)), where n is the number of characters.
+    - priority queue require O(log(n)) time per insertion.
+    - Huffman coding tree is a complete binary tree with 2n-1 nodes,
+
+*/
+
 //A tree Node
 struct Node {
     char ch;
